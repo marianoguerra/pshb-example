@@ -21,5 +21,6 @@ src/gaemodel.py
 src/index.html
 src/pubsubhubbub_publish.py
 src/static/js/val.js
+src/static/js/req.js
 src/val.py
 
