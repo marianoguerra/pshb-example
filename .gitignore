@@ -13,3 +13,13 @@ src/static/js/json2.js
 src/static/js/jquery.tmpl.js
 src/static/css/reset-min.css
 google_appengine
+
+src/app.py
+src/app.yaml
+src/feedparser.py
+src/gaemodel.py
+src/index.html
+src/pubsubhubbub_publish.py
+src/static/js/val.js
+src/val.py
+
