@@ -10,8 +10,8 @@ body{
  height: 100%;
  font-family: Arial;
  font-size: 14pt;
- color: #333;
- text-shadow: 0 1px 1px #bbb;
+ color: #444;
+ text-shadow: 0 1px 1px #ddd;
 }
 
 .hidden{
@@ -30,6 +30,14 @@ body{
  text-align: right;
 }
 
+#header a {
+ text-decoration: none;
+}
+
+#header a:hover {
+ text-decoration: underline;
+}
+
 a:visited, a{
  color: #555;
 }
@@ -43,7 +51,7 @@ input[type=text], input[type=password], input[type=mail], textarea{
  font-family: arial;
  font-size: 14pt;
  padding: 0.2em;
- text-shadow: 0 1px 1px #ccc;
+ text-shadow: 0 1px 1px #ddd;
 }
 
 #message{
@@ -57,7 +65,7 @@ input[type=text], input[type=password], input[type=mail], textarea{
  padding: 1em;
  margin: 1em 0;
  border: 1px solid #ddd;
- background-color: #f4f4f4;
+ background-color: #fafafa;
 }
 
 .lonely{
