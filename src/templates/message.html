@@ -1,0 +1,27 @@
+<html>
+ <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+ 
+  <title>message from {{msg.user}}</title>
+   <link rel="stylesheet" href="/static/css/reset-min.css" type="text/css" media="screen" charset="utf-8">
+   <link rel="stylesheet" href="/static/css/main.css" type="text/css" media="screen" charset="utf-8">
+
+   <link href="/static/img/favicon.ico" rel="icon" type="image/x-icon" />
+ </head>
+ <body>
+
+  <div id="main">
+   <ul id="stream">
+    <li class="msg lonely">
+     <a href="/#/user/{{msg.user}}">{{msg.user}}</a>: {{msg.text}}
+     <ul class="msg-tags">
+     {% for tag in msg.tags %}
+     <li class="msg-tag"><a href="/#/tag/{{tag}}">{{tag}}</a></li>
+     {% endfor %}
+     </ul>
+    </li>
+   </ul>
+  </div>
+
+ </body>
+</html>

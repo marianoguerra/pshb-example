@@ -1,0 +1,79 @@
+<html>
+ <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+ 
+  <title>tubes</title>
+   <link rel="stylesheet" href="/static/css/reset-min.css" type="text/css" media="screen" charset="utf-8">
+   <link rel="stylesheet" href="/static/css/main.css" type="text/css" media="screen" charset="utf-8">
+
+   <link href="/static/img/favicon.ico" rel="icon" type="image/x-icon" />
+ </head>
+ <body>
+  <div id="header">
+   <a href="#/logout" id="logout-btn" class="hidden">logout</a> <a href="#/login" id="login-btn">login</a> <a href="/signup">signup</a> 
+  </div>
+
+  <div id="main">
+   <div id="login" class="hidden">
+    <fieldset id="name">
+    
+     <div class="field">
+      <label for="user">user</label>
+      <input type="text" name="user" value="" id="user">
+     </div>
+     
+     <div class="field">
+      <label for="password">password</label>
+      <input type="password" name="password" value="" id="password"> 
+     </div>
+
+     <div class="buttons">
+      <input type="button" id="login-button" name="login" value="login">
+     </div>
+     
+    </fieldset>
+    
+   </div>
+
+   <div id="form" class="hidden">
+    <div id="new-message" class="panel">
+     <textarea name="message" id="message" rows="4" cols="40"></textarea>
+
+     <div class="buttons">
+      <a href="#" id="send-message">send</a>
+     </div>
+    </div>
+
+   </div>
+
+   <ul id="stream">
+    <li class="loading"><img src="/static/img/loading-circle.gif" alt="loading"></li>
+   </ul>
+  </div>
+
+  <script src="/static/js/jquery.js"></script>
+  <script src="/static/js/jquery.tmpl.js"></script>
+  <script src="/static/js/sammy.js"></script>
+  <script src="/static/js/json2.js"></script>
+  <script src="/static/js/val.js"></script>
+  <script src="/static/js/req.js"></script>
+  <script src="/static/js/ui.js"></script>
+  <script src="/static/js/model.js"></script>
+  <script>
+   $(ui.init);
+  </script>
+
+  <script id="msg-tpl" type="text/x-jquery-tmpl">
+   {% raw %}
+   <li class="msg">
+    <a href="/#/user/${user}">${user}</a>: ${text}
+    <ul class="msg-tags">
+    {{each tags}}
+     <li class="msg-tag"><a href="/#/tag/${$value}">${$value}</a></li>
+    {{/each}}
+    </ul>
+   </li>
+   {% endraw %}
+  </script>
+ </body>
+</html>

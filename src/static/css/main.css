@@ -1,0 +1,110 @@
+html {
+ width: 100%;
+ height: 100%;
+ background-color: #fff;
+}
+
+body{
+ width: 50%;
+ margin-left: 25%;
+ height: 100%;
+ font-family: Arial;
+ font-size: 14pt;
+ color: #333;
+ text-shadow: 0 1px 1px #bbb;
+}
+
+.hidden{
+ display: none;
+}
+
+.buttons{
+ text-align: right;
+ width: 100%;
+ display: table;
+}
+
+#header{
+ width: 100%;
+ padding: 0.1em;
+ text-align: right;
+}
+
+a:visited, a{
+ color: #555;
+}
+
+a:hover {
+ color: #777;
+}
+
+input[type=text], input[type=password], input[type=mail], textarea{
+ border: 1px solid #ccc;
+ font-family: arial;
+ font-size: 14pt;
+ padding: 0.2em;
+ text-shadow: 0 1px 1px #ccc;
+}
+
+#message{
+ width: 100%;
+ margin: 1em 0;
+ height: 5em;
+}
+
+.msg{
+ width: 96%;
+ padding: 1em;
+ margin: 1em 0;
+ border: 1px solid #ddd;
+ background-color: #f4f4f4;
+}
+
+.lonely{
+ margin-top: 40%;
+}
+
+.msg-tags{
+ margin-top: 0.5em;
+ margin-left: 0.5em;
+}
+
+.msg-tag{
+ margin-right: 0.5em;
+ font-size: small;
+ display: inline;
+}
+
+.loading{
+ margin: 1em;
+ margin-left: 49%;
+}
+
+#form{
+ margin-top: 2em;
+}
+
+#form input{
+ float: right;
+ width: 50%;
+}
+
+.field{
+ width: 100%;
+ margin: 0.4em;
+ display: table;
+}
+
+.field label{
+ float: left;
+ width: 48%;
+}
+
+.field input{
+ float: right;
+ width: 50%;
+}
+
+#signup{
+ margin-top: 20%;
+}

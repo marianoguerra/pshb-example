@@ -1,0 +1,4 @@
+mariano@ganesha:~/dev/phsb$ google_appengine/dev_appserver.py src/ -p 8000 --datastore_path=/tmp/tubes1
+mariano@ganesha:~/dev/phsb$ google_appengine/dev_appserver.py src/ -p 8001 --datastore_path=/tmp/tubes2
+mariano@ganesha:~/dev/phsb$ google_appengine/dev_appserver.py pubsubhubbub/hub/
+

@@ -1,0 +1,15 @@
+.*.swp
+.*.swo
+*~
+*.pyc
+*.bak
+src/flask
+src/werkzeug
+src/jinja2
+src/simplejson
+src/static/js/jquery.js
+src/static/js/sammy.js
+src/static/js/json2.js
+src/static/js/jquery.tmpl.js
+src/static/css/reset-min.css
+google_appengine
