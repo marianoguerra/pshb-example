@@ -13,3 +13,5 @@ rm gae-setup.sh
 
 wget -O src/feedparser.py http://feedparser.googlecode.com/svn/trunk/feedparser/feedparser.py
 wget -O src/pubsubhubbub_publish.py http://pubsubhubbub.googlecode.com/svn/trunk/publisher_clients/python/pubsubhubbub_publish.py
+
+svn checkout http://pubsubhubbub.googlecode.com/svn/trunk/ pubsubhubbub
