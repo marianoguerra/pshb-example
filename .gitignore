@@ -12,6 +12,7 @@ src/static/js/sammy.js
 src/static/js/json2.js
 src/static/js/jquery.tmpl.js
 src/static/css/reset-min.css
+pubsubhubbub
 google_appengine
 
 src/app.py
