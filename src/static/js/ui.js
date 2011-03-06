@@ -8,10 +8,10 @@ ui.init = function () {
     ui.app.setLocation("#/");
 };
 
-ui.crossFade = function (toHide, toShow) {
+ui.crossFade = function (toHide, toShow, onFinish) {
     $(toHide).fadeOut(function () {
             setTimeout(function () {
-                $(toShow).fadeIn()
+                $(toShow).fadeIn(onFinish)
             }, 500);
     });
 };
@@ -71,10 +71,11 @@ ui.onLoginOk = function (response) {
         $("#password").val("");
 
         ui.user = response.user;
-        ui.crossFade("#login", "#form");
+        ui.crossFade("#login", "#form", function () { $("#message").focus(); });
         ui.crossFade("#login-btn", "#logout-btn");
+        $("#signup-btn").fadeOut();
         ui.app.setLocation("#/timeline/" + ui.user);
-
+        ;
     }
     else {
         ui.onLoginError();
@@ -90,6 +91,7 @@ ui.logout = function () {
     ui.user = "";
     ui.crossFade("#form", "#login");
     ui.crossFade("#logout-btn", "#login-btn");
+    $("#signup-btn").fadeIn();
     ui.app.setLocation("#/");
 };
 
@@ -138,7 +140,7 @@ ui.showUserTimelineStream = function (context) {
 };
 
 ui.showLogin = function (context) {
-    ui.crossFade("#form", "#login");
+    ui.crossFade("#form", "#login", function () { $("#user").focus(); });
 };
 
 ui.app = $.sammy(function() {
