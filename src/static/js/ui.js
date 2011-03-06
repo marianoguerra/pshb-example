@@ -17,6 +17,7 @@ ui.crossFade = function (toHide, toShow, onFinish) {
 };
 
 ui.error = function (msg) {
+    $.jGrowl(msg);
     console.error(msg);
 };
 
