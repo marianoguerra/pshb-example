@@ -16,6 +16,7 @@ google_appengine
 
 src/app.py
 src/app.yaml
+src/index.yaml
 src/feedparser.py
 src/gaemodel.py
 src/index.html
