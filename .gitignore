@@ -24,5 +24,8 @@ src/index.html
 src/pubsubhubbub_publish.py
 src/static/js/val.js
 src/static/js/req.js
+src/static/css/jquery.jgrowl.css
+src/static/js/jquery.jgrowl.js
+
 src/val.py
 
