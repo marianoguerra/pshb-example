@@ -31,7 +31,7 @@ does (we don't need those libraries)
 Running
 -------
 
-now we will start the example aplication called pleinu twice (so we can test the comunication
+now we will start the example application called pleinu twice (so we can test the communication
 using the hub) and we will start a local pshb hub.
 
 open 3 terminals and run one comment on each one::
@@ -82,8 +82,8 @@ go to http://localhost:8001/ and create another user, I will call it patrick
 
 in the main page of the hub (http://localhost:8080/) click on the subscribe like near the bottom
 
-enter http://localhost:8001/p/notify/patrick/ on the Callback field (change patrick for your username if you used anotherone)
-enter http://localhost:8000/atom/messages/from/spongebob/ on the Topic field (change spongebob for your username if you used anotherone)
+enter http://localhost:8001/p/notify/patrick/ on the Callback field (change patrick for your username if you used another one)
+enter http://localhost:8000/atom/messages/from/spongebob/ on the Topic field (change spongebob for your username if you used another one)
 
 click the "Do it" button, the page won't change, that's ok.
 
@@ -94,7 +94,7 @@ Go to http://localhost:8000/ (login if you closed it) and send a message.
 
 Now go to http://localhost:8001/ and refresh the page, you should see the messages published by the user in the other site.
 
-..note:: to make it work and avoid an exception I had to add a return statement at the beggining of the log_message function at google_appengine/google/appengine/tools/dev_appserver.py
+..note:: to make it work and avoid an exception I had to add a return statement at the beginning of the log_message function at google_appengine/google/appengine/tools/dev_appserver.py
 
 if you get that exception like this::
 
@@ -117,3 +117,4 @@ edit the function to look like this::
         logging.info(format, *args)
 
 you will have to set write permissions to the file to save it (chmod u+w dev_appserver.py)
+
