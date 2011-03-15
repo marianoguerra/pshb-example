@@ -94,7 +94,7 @@ Go to http://localhost:8000/ (login if you closed it) and send a message.
 
 Now go to http://localhost:8001/ and refresh the page, you should see the messages published by the user in the other site.
 
-..note:: to make it work and avoid an exception I had to add a return statement at the beginning of the log_message function at google_appengine/google/appengine/tools/dev_appserver.py
+.. note:: to make it work and avoid an exception I had to add a return statement at the beginning of the log_message function at google_appengine/google/appengine/tools/dev_appserver.py
 
 if you get that exception like this::
 
