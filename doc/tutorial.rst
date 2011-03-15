@@ -17,6 +17,7 @@ Installing
 ----------
 
 ::
+
 	git clone https://github.com/marianoguerra/pshb-example.git
 	cd pshb-example
 	bash setup.sh
@@ -93,9 +94,19 @@ Go to http://localhost:8000/ (login if you closed it) and send a message.
 
 Now go to http://localhost:8001/ and refresh the page, you should see the messages published by the user in the other site.
 
-.. note: to make it work and avoid an exception I had to add a return statement at the beggining of the log_message function at google_appengine/google/appengine/tools/dev_appserver.py
+..note:: to make it work and avoid an exception I had to add a return statement at the beggining of the log_message function at google_appengine/google/appengine/tools/dev_appserver.py
 
-if you get that exception edit the function to look like this::
+if you get that exception like this::
+
+        in log_request
+            self.requestline, str(code), str(size))
+          File "/home/asd/pubsubhubbub/pshb/google_appengine/google/appengine/
+        tools/dev_appserver.py", line 3314, in log_message
+            if self.channel_poll_path_re.match(self.path):
+        AttributeError: DevAppServerRequestHandler instance has no attribute
+        'path' 
+
+edit the function to look like this::
 
     def log_message(self, format, *args):
       """Redirect log messages through the logging module."""
